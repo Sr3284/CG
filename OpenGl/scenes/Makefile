@@ -10,9 +10,13 @@ torus/torus: torus/torus.cpp
 spinCube/spinCube: spinCube/spinCube.cpp
 	$(CXX) spinCube/spinCube.cpp -o spinCube/spin -Wall $(LIBS)
 
+comet/comet: comet/comet.cpp
+	$(CXX) comet/comet.cpp -o comet/comet -Wall $(LIBS)
+
 .PHONY: clean
 
 clean:
 	rm -rf tetrahedron/tetra
 	rm -rf torus/torus
 	rm -rf spinCube/spin
+	rm -rf comet/comet
