@@ -1,7 +1,7 @@
 CXX = g++
 LIBS = -lGLEW -lGL -lGLU -lglut
 
-all: tetrahedron/tetrahedron torus/torus spinCube/spinCube comet/comet moon/moon
+all: tetrahedron/tetrahedron torus/torus spinCube/spinCube comet/comet moon/moon bounce/bounce
 
 tetrahedron/tetrahedron: tetrahedron/tetrahedron.cpp
 	$(CXX) tetrahedron/tetrahedron.cpp -o tetrahedron/tetra -Wall $(LIBS)
@@ -18,6 +18,9 @@ comet/comet: comet/comet.cpp
 moon/moon: moon/moon.cpp
 	$(CXX) moon/moon.cpp -o moon/moon -Wall $(LIBS)
 
+bounce/bounce: bounce/bounce.cpp
+	$(CXX) bounce/bounce.cpp -o bounce/bounce -Wall $(LIBS)
+
 .PHONY: clean
 
 clean:
@@ -26,3 +29,4 @@ clean:
 	rm -rf spinCube/spin
 	rm -rf comet/comet
 	rm -rf moon/moon
+	rm -rf bounce/bounce
